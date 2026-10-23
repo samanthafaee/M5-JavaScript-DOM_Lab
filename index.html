@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="A Bauhaus-inspired JavaScript and DOM laboratory page.">
+        <title>Form and Functions</title>
+
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/script.js" defer></script>
+    </head>
+
+    <body>
+        <header class="site-header">
+            <div class="container header-content">
+                <a class="logo" href="#home">Form + Functions</a>
+
+                <button
+                    class="menu-button"
+                    id="menu-button"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="primary-navigation"
+                    >
+                    <span class="menu-icon" aria-hidden="true">☰ Menu</span>
+                </button>
+
+                <nav 
+                    id="primary-navigation"
+                    class="primary-navigation"
+                    aria-label="primary navigation">
+                    <a href="#home">Start</a>
+                    <a href="#projects">Studies</a>
+                    <a href="#contact">Contact</a>
+                </nav>
+
+                <button
+                    class="theme-button"
+                    id="theme-button"
+                    type="button"
+                    aria-pressed="false">
+                    change mode
+                </button>
+            </div>
+        </header>
+
+        <main id="home">
+            <section class="hero section-padding">
+                <div class="container hero-grid">
+                    <div>
+                        <p class="eyebrow">
+                            Structure // Intereaction // JavaScript
+                        </p>
+
+                        <h1>Clear forms create powerful experiences.</h1>
+
+                        <p class="hero-text">
+                            Explore a responsive study built with event listeners,
+                            array-based content, theme switching, and accessible validation.
+                        </p>
+
+                        <a class="button-link" href="#projects">
+                            View Studies
+                        </a>
+                    </div>
+
+                    <div class="hero-card" aria-label="Project summary">
+                        <span class="hero-number">04</span>
+
+                        <p>
+                            Four interactive elements built with plain JavaScript.
+                        </p>
+                </div>
+            </section>
+
+            <section id="projects" class="section-padding projects-section">
+                <div class="container">
+                    <p class="eyebrow">Dynamic Collection</p>
+
+                    <h2>Featured Studies</h2>
+
+                    <div
+                        id="projects-container"
+                        class="projects-grid"
+                        aria-live="polite">
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact" class="section-padding contact-section">
+                <div class="container contact-grid">
+                    <div>
+                        <p class="eyebrow">Direct Response</p>
+
+                        <h2>Share an idea with the team.</h2>
+
+                        <p>
+                            Use the form to test clear and specific field validation.
+                        </p>
+                    </div>
+
+                    <form id="contact-form" novalidate>
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+
+                            <input 
+                                id="name"
+                                name="name"
+                                type="text"
+                                autocomplete="name"
+                                aria-describedby="name-error">
+
+                            <p id="name-error" class="error-message"></p>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+
+                            <input
+                                id="email"
+                                name="email"
+                                type="email"
+                                autocomplete="email"
+                                aria-describedby="email-error">
+
+                            <p id="email-error" class="error-message"></p>  
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+
+                            <textarea
+                                id="message"
+                                name="message"
+                                rows="5"
+                                aria-describedby="message-error"></textarea>
+                                
+                            <p id="message-error" class="error-message"></p>
+                        </div>
+
+                        <button class="submit-button" type="submit">Send Response
+                        </button>
+
+                        <p
+                        id="form-status"
+                        class="form-status"
+                        role="status"
+                        aria-live="polite">
+                        </p>
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <div class="container">
+                <p>Module 5 // JavaScript and DOM Practice</p>
+            </div>
+        </footer>
+    </body>
+</html>
